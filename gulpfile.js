@@ -102,11 +102,11 @@ gulp.task('js',['js-hint'], function() {
 
 // BUMP
 // Updates the package version 
-gulp.task('bump', function(){
-  gulp.src('./package.json')
-  .pipe(bump())
-  .pipe(gulp.dest('./'));
-});
+// gulp.task('bump', function(){
+//   gulp.src('./package.json')
+//   .pipe(bump())
+//   .pipe(gulp.dest('./'));
+// });
 
 
 // WATCH
