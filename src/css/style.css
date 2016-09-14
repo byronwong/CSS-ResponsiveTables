@@ -48,7 +48,7 @@ table {
 
 tr{
   display: inline-table;
-  max-width: 270px;
+  /*max-width: 270px;*/
 }
 
 /* End Alt design */
