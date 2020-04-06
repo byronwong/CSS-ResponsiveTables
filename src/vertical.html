@@ -3,8 +3,8 @@
 <head>
 
   <!-- ================================================================
-	This is a 'basekit' - a basic starter kit with no task runner or 
-	precomilers runing on it.
+  This is a 'basekit' - a basic starter kit with no task runner or 
+  precomilers runing on it.
 
   https://www.sitepoint.com/a-minimal-html-document-html5-edition/      
   ================================================================= -->
@@ -56,7 +56,36 @@
       border-bottom: 1px solid #d7d7d7;
     }
 
+    .bounding-box{
+      width: 100%;
+      overflow-x: scroll;
+    }
+
+    table {
+      width: 450%;
+    }
+
+    tr{
+      display: inline-table;
+    }
+
+
+
     @media (min-width: 960px) {
+
+      .bounding-box{
+        width: 100%;
+        overflow-x: initial;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      tr{
+        display: inline-table;
+        max-width: 270px;
+      }
 
       thead {
         display: table-header-group;
@@ -80,19 +109,22 @@
       }
     }
   </style>
-
+  
 </head>
 
 <body>
 
   <h1>Responsive Tables</h1>
+
+  <ul>
      <li><a href="index.html">01 - Home: simple table</a></li>
      <li><a href="vertical.html">02 - Vertical Table (mobile)</a></li>
      <li><a href="vertical-alt.html">03 - Vertical Table (mobile) alt</a></li>
      <li><a href="calendar.html">04 - Calendar</a></li> 
   </ul>
 
-  <h2>01 - Home: simple table</h2>
+  <h2>02 - Vertical Table in mobile with horizontal scroll</h2>
+  <p>Note: td elements with alot of data will keep extending the column width</p>
 
   <div class="bounding-box">
     <table>

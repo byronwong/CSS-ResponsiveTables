@@ -3,8 +3,8 @@
 <head>
 
   <!-- ================================================================
-	This is a 'basekit' - a basic starter kit with no task runner or 
-	precomilers runing on it.
+  This is a 'basekit' - a basic starter kit with no task runner or 
+  precomilers runing on it.
 
   https://www.sitepoint.com/a-minimal-html-document-html5-edition/      
   ================================================================= -->
@@ -34,7 +34,7 @@
     tr{
       border-spacing: 0;
       border-collapse: collapse;
-      display: block;
+      display: inline-block;/*Important*/
       margin-bottom: 24px;
     }
 
@@ -42,6 +42,11 @@
       display: block;
       font-weight: bold;
       content: attr(data-col-title) ": ";
+    }
+
+    
+    tbody{
+      white-space: nowrap;/*Important*/
     }
 
     th, td {
@@ -56,10 +61,24 @@
       border-bottom: 1px solid #d7d7d7;
     }
 
+    .bounding-box{
+      width: 100%;
+      overflow-x: scroll;
+    }
+
+
     @media (min-width: 960px) {
+
+      .bounding-box{
+        overflow-x: initial;
+      }
 
       thead {
         display: table-header-group;
+      }
+
+        tbody{
+        white-space: normal; /*optional*/
       }
 
       tr {
@@ -71,8 +90,6 @@
         display: table-cell;
         vertical-align: top;
         border: 1px solid #d7d7d7;
-        width: auto;
-        max-width: 270px;
       }
 
       td[data-col-title]:before {
@@ -80,19 +97,23 @@
       }
     }
   </style>
-
+  
 </head>
 
 <body>
 
   <h1>Responsive Tables</h1>
+
+  <ul>
      <li><a href="index.html">01 - Home: simple table</a></li>
      <li><a href="vertical.html">02 - Vertical Table (mobile)</a></li>
      <li><a href="vertical-alt.html">03 - Vertical Table (mobile) alt</a></li>
      <li><a href="calendar.html">04 - Calendar</a></li> 
   </ul>
 
-  <h2>01 - Home: simple table</h2>
+  <h2>02 - Vertical Table in mobile with horizontal scroll alternative code (better)</h2>
+  <p>Note: the verticale table differently implemented (flip scroll): https://elvery.net/demo/responsive-tables</p>
+  <p>Note: td elements with alot of data will keep extending the column width</p>
 
   <div class="bounding-box">
     <table>
@@ -112,7 +133,7 @@
         <tr>
           <td data-col-title="First Name">Jasmine</td>
           <td data-col-title="Last Name" >Gaines</td>
-          <td data-col-title="Email"     >lectus.pede.ultrices@antebibendumullamcorper.org</td>
+          <td data-col-title="Email"     >lectus.pede.ultr ices@antebi bendumu  llamcorp er.org</td>
           <td data-col-title="Phone"     >(210) 823-5051</td>
           <td data-col-title="Street"    >Ap #509-3106 Massa. Rd.</td>
           <td data-col-title="City"      >Attigliano</td>
@@ -121,7 +142,7 @@
         <tr>
           <td data-col-title="First Name">Amaya</td>
           <td data-col-title="Last Name" >Carey</td>
-          <td data-col-title="Email"     >vel.quam.dignissim@Vestibulumaccumsanneque.co.uk</td>
+          <td data-col-title="Email"     >vel.quam. dignissim @Vestibulu maccumsa  nneque.co.uk</td>
           <td data-col-title="Phone"     >(747) 480-6129</td>
           <td data-col-title="Street"    >8956 Accumsan Rd.</td>
           <td data-col-title="City"      >Anantapur</td>
@@ -139,7 +160,7 @@
         <tr>
           <td data-col-title="First Name">Hannah</td>
           <td data-col-title="Last Name" >Ward</td>
-          <td data-col-title="Email"     >Proin.ultrices.Duis@tinciduntnibhPhasellus.edu</td>
+          <td data-col-title="Email"     >Proi  n.ultrices.Duis@tincidu  ntnibhPhasellus.edu</td>
           <td data-col-title="Phone"     >(766) 206-5747</td>
           <td data-col-title="Street"    >8368 Quisque Road</td>
           <td data-col-title="City"      >Etroubles</td>

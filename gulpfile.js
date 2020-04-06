@@ -39,7 +39,7 @@ var env = process.env.NODE_ENV || 'development';
 
 // HTML
 gulp.task('html', function(){
-	return gulp.src('./src/index.html')
+	return gulp.src('./src/*.html')
 	.pipe(gulp.dest('./dist/'));
 });
 
@@ -135,7 +135,7 @@ gulp.task('serve', ['html','css','js'], function () {
     // all browsers reload after tasks are complete.
     // serve is now handling watch
     // gulp.watch(<sourcepath>, <[task(s)]>, callback);
-    gulp.watch('./src/index.html',['html-watch']);
+    gulp.watch('./src/*.html',['html-watch']);
     gulp.watch('./src/css/*.css',['css-watch']);
     gulp.watch('./src/js/*.js',['js-watch']);
 
